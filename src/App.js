@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import talkExpert from './services/talkExpert.js';
+import AttachmentModal from './components/AttachmentModal/AttachmentModal';
 
-function App() {
+const App = () => {
+
+  const [show, setShow] = useState(false)
+
+  const openModal = () => {
+    setShow(true);
+  };
+
+  const closeModal = () => {
+    setShow(false);
+  };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <button className="button yellow-button" onClick={talkExpert}>
+        Talk to an expert today
+      </button>
+      <button className="button" onClick={openModal}>
+        Attachment Finder
+      </button>
+      <AttachmentModal show={show} onClose={closeModal} />
     </div>
   );
-}
+};
 
 export default App;
+
