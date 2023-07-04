@@ -1,0 +1,45 @@
+const modal_steps = [
+    {
+        title: 'What type of machine this attachment will be installed on?',
+        image: false,
+        answer1: 'Excavator',
+        answer2: 'Skid Steer',
+        action: 'next',
+    },
+    {
+        title1: 'What is the weight category of the Excavator?',
+        title2: 'What is the weight category of the Skid Steer?',
+        image1: 'excavator_img',
+        image2: 'skid_steer_img',
+        answer1: 'Mini - Standon',
+        answer2: 'Medium',
+        answer3: 'Large',
+        description1: 'less than x lbs',
+        description2: 'between x lbs and y lbs',
+        description3: 'between x lbs and y lbs',
+        action: 'next',
+    },
+    {
+        title1: 'What is the Hydraulic Flow of your Excavator in GPM (Gallons per Minute)?',
+        title2: 'What is the Hydraulic Flow of your Skid Steer in GPM (Gallons per Minute)?',
+        image: false,
+        answer1: 'Standard Flow',
+        answer2: 'High Flow',
+        description1: '17-25 GPM',
+        description2: '30-45 GPM',
+        action: 'next',
+    },
+    {
+        title: 'What is the length of the material you want to split?',
+        image: 'logs_img',
+        answer1: 'Short',
+        answer2: 'Medium',
+        answer3: 'Long',
+        description1: 'ex: small trunks...',
+        description2: 'ex: small trees',
+        description3: 'ex: large trees',
+        action: 'finish',
+    },
+];
+
+export default modal_steps;
