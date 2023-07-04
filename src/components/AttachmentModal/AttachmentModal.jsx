@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 import talkExpert from '../../services/talkExpert.js';
 import modal_steps from '../../config/modal_steps';
-import skid_steer_img from '../../img/skid_steer.png';
-import excavator_img from '../../img/excavator.png';
-import logs_img from '../../img/logs.png';
+import CardsModal from '../CardsModal/CardsModal';
 
 
 
@@ -30,16 +28,6 @@ const AttachmentModal = props => {
     setStep(step+1)
   }
 
-  function imagePath() {
-    if (step === 3) {
-      return logs_img
-    }
-    if (attach !== "Excavator") {
-      return skid_steer_img
-    }
-    return excavator_img
-  }
-
   function checkAction(action) {
     // get string action and return related function
     if (action === "finish") {
@@ -60,20 +48,19 @@ const AttachmentModal = props => {
             Close
           </div>
         </div>
-        <div className="modal-body">
-          <img width={100} height={100} src={imagePath(modal_steps[step])} alt={attach}/>
-
+        <div className="modal-body">    
+          <CardsModal
+            step={modal_steps[step]}
+            attach={attach}
+          />
         </div>
         <div className="modal-footer">
           <div className="underline" onClick={talkExpert}>
             Not sure? Talk to an expert!
           </div>
           <div className="right">
-            <div>
-              { step !== 0 ? <button onClick={back}> Back </button> : null }
-              <button onClick={() => checkAction(modal_steps[step].action)}> Next </button>
-            </div>
-            
+            { step !== 0 ? <div className="underline" onClick={back}> Back </div> : null }
+            <button className="nextButton" onClick={() => checkAction(modal_steps[step].action)}> Next </button>
           </div>
         </div>
       </div>

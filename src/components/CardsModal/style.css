@@ -1,0 +1,40 @@
+.cardsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+.card {
+    flex: 0 0 calc(25%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: #f1f1f1;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.selected {
+  border: 5px solid #ffba3f;
+  background-color: rgba(255, 186, 63, 0.2);
+}
+
+.imageBox {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: end; 
+  
+}
+
+img {
+  margin-bottom: 50px;
+}
+h3, h4 {
+  margin: 0;
+}

@@ -15,9 +15,8 @@
 
 
 .modal-content {
-  width: 600px;
-  height: 400px;
-
+  width: 800px;
+  height: 500px;
   border: 2px solid black;
   
   display: flex;
@@ -25,7 +24,7 @@
 
   background-color: #fff;
   border-radius: 4px;
-  padding: 20px;
+  padding: 20px 40px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -51,8 +50,7 @@
 }
 
 .title p {
-  margin-top: 20px;
-  color: #888;
+  margin-top: 16px;
 }
 
 .underline {
@@ -61,6 +59,20 @@
   text-decoration: underline;
 }
 
-.right button {
-  margin-left: 10px;
+.nextButton {
+  cursor: pointer;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: row;
+  gap: 40px;
 }
