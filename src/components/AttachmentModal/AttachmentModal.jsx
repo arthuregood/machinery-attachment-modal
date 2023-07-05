@@ -43,8 +43,6 @@ const AttachmentModal = (props) => {
   }
 
   function finish() {
-    console.log(answers);
-
     // emulate an async call using setTimeout
     setLoading(true);
     setTimeout(() => {
@@ -53,7 +51,6 @@ const AttachmentModal = (props) => {
     }, 3000);
 
     setRecommendations(FindAttachment(answers));
-    console.log(recommendations);
   }
 
   const isCardSelected = selectedCardIndex !== null;
