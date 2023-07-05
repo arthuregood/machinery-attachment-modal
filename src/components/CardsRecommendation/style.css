@@ -1,0 +1,68 @@
+.cardsRecommended {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    gap: 25px;
+  }
+
+.cardsRecommended .card {
+    flex: 0 0 calc(20%);
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center; 
+    background-color: #f1f1f1;
+    border: 2px solid black;
+    border-radius: 24px;
+    padding: 20px;
+    cursor: default;
+}
+
+.recommended {
+  flex: 0 0 calc(20%);
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center; 
+  background-color: #f1f1f1;
+  border: 2px solid black;
+  border-radius: 24px;
+  padding: 20px;
+  cursor: default;
+  border: 5px solid #ffba3f;
+}
+
+
+.cardsRecommended .card .imageBox {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: end; 
+}
+
+.imageBox img {
+  margin-bottom: 20px;
+}
+
+.cardsRecommended h3, h4 {
+  margin: 5px;
+}
+
+.cardsRecommended h4 {
+  font-weight: 400;
+}
+
+.buyButton {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  margin: 10px 0;
+}
